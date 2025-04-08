@@ -16,7 +16,7 @@ if st.button("Crear Histograma"):
     st.plotly_chart(fig, use_container_width=True)
     
     # Botón gráfico de dispersión
-if st.button("Crear Gráfico de Dispersión"):
+if st.checkbox("Crear Gráfico de Dispersión"):
     st.write("Creando gráfico de dispersión... 'odometer' vs 'price'")
     if 'odometer' in df.columns and 'price' in df.columns:
         fig2 = px.scatter(df, x='odometer', y='price', title='Gráfico de Dispersión de Kilometraje vs Precio')
